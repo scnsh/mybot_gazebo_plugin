@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- A testing model that includes the Mybot sensor model -->
+    <model name="mybot">    
+      <include>
+        <uri>model://mybot</uri>
+      </include>
+      <!-- Attach the plugin to this model -->
+      <plugin name="mybot_control" filename="libmybot_plugin.so"/>
+    </model>
+
+  </world>
+</sdf>
